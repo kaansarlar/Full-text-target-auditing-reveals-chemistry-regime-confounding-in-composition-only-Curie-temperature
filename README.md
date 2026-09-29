@@ -6,6 +6,10 @@ This repository contains the public reproducibility package for the manuscript:
 
 The repository is intentionally compact. It contains the analysis-ready data, publication-group assignments, source manifests, executable analysis code, principal numerical outputs, and final figures required to audit or reproduce the reported results. Manuscript drafts, downloaded source articles, duplicate workbooks, and exploratory files that do not support a reported result are deliberately excluded.
 
+## Version 1.0.1 metadata correction
+
+Version 1.0.1 corrects three nominal-composition labels in source rows 141, 143, and 144 after verification against the source table. The associated `TC` values, all descriptors, publication assignments, deduplication, model inputs, predictions, figures, and reported metrics are unchanged. The full audit is in `docs/DATA_CORRECTIONS.md` and `data/processed/development_curation_audit.csv`.
+
 ## Quick verification
 
 ```bash
