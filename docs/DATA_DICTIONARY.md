@@ -23,10 +23,14 @@ The processed files add row-level provenance to the numerical table.
 | `composition` | Retained nominal composition formula |
 | `reference_id` | Publication-group identifier used by grouped cross-validation |
 | `reference_text` | Full source citation recovered from the composition/source document |
-| `composition_match_ambiguous_within_reference` | True where repeated H–dS keys within a publication prevent a unique formula ordering; publication assignment remains exact |
+| `composition_match_ambiguous_within_reference` | Algorithmic audit flag showing that the H–dS key was repeated within a publication during formula reconstruction. It does not mark the numerical target or descriptors as uncertain. Source-table resolutions are recorded separately. |
 | remaining fields | Same numerical variables as the raw table |
 
 `development_unique_141.csv` removes repeats using the eleven composition descriptors plus `TC`. Formula strings are preserved for traceability but are not required to be unique.
+
+## `data/processed/development_curation_audit.csv`
+
+Versioned audit trail for source-row corrections, source-table verification, and retained legacy extraction differences. Version 1.0.1 corrects three formula labels without changing `TC`, any descriptor, the 199/141 record counts, or model inputs. See `docs/DATA_CORRECTIONS.md` for the rationale and impact assessment.
 
 ## `data/processed/historical_audit_32.csv`
 

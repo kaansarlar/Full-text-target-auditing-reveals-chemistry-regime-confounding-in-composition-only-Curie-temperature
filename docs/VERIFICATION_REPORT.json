@@ -1,7 +1,7 @@
 {
-  "package": "Tc-targeting-validation-v1.0.0",
+  "package": "Tc-targeting-validation-v1.0.1",
   "status": "PASS",
-  "checks_passed": 23,
+  "checks_passed": 25,
   "checks": [
     {
       "check": "raw-row-count",
@@ -32,6 +32,16 @@
       "check": "deduplication-key",
       "status": "PASS",
       "detail": "descriptor–target key must produce 141 rows"
+    },
+    {
+      "check": "verified-composition-labels",
+      "status": "PASS",
+      "detail": "row 141=Fe25.64Co25.64Ni25.64Cr23.08; row 143=FeCoNiCr; row 144=Fe25.3Co25.3Ni25.3Cr24.1"
+    },
+    {
+      "check": "curation-audit",
+      "status": "PASS",
+      "detail": "documented rows=[2, 37, 39, 60, 66, 93, 139, 140, 141, 143, 144, 148]"
     },
     {
       "check": "outer-test-reference-coverage",

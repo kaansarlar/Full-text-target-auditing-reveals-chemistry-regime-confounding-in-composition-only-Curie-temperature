@@ -8,6 +8,7 @@
 4. Open `results/rule_reassessment/nested_rule_comparison_summary.csv` for the three complete rule-selection procedures.
 5. Open `results/rule_reassessment/external_v1_v2_metrics.csv` for the historical and targeted literature comparisons.
 6. Open `data/processed/process_state_sensitivity.csv` for the paired processing-state counterexample.
+7. Open `docs/DATA_CORRECTIONS.md` and `data/processed/development_curation_audit.csv` for the v1.0.1 metadata audit.
 
 ## Claim-to-file shortcuts
 
@@ -37,5 +38,6 @@
 - `references/historical_audit_sources.csv` maps all 32 audit rows to the v28 bibliography.
 - `references/targeted_challenge_sources.csv` maps the challenge rows to five DOI-bearing papers.
 - `references/manuscript_references.md` reproduces the displayed 51-entry bibliography.
+- `data/processed/development_curation_audit.csv` records the row-level v1.0.1 corrections and retained legacy extraction notes.
 
 The package excludes copyrighted source PDFs; the DOI/source manifests are the audit trail.
