@@ -1,0 +1,13 @@
+source_row,reference_id,status,field,action,impact,note
+2,[1],unresolved_metadata_only,composition,retained,no_model_impact,"Repeated H-dS key; exact formula ordering was not re-established from the available source copy. Numerical target and descriptors are unchanged."
+37,[10],target_invariant_ambiguity,composition,retained,no_model_impact,"Repeated H-dS key within a block whose TC values are all 44 K; formula ordering does not affect the regression target."
+39,[10],resolved,RC,inserted_missing_zero,no_model_change,"Legacy workbook field alignment corrected to RC=0; the public raw CSV was already correct."
+60,[13],documented_common_point,TC,retained_271.0,no_model_change,"Same nominal common composition as row 66, represented in the x-series; 0.3 K difference retained as legacy extraction/rounding."
+66,[13],documented_common_point,TC,retained_271.3,no_model_change,"Same nominal common composition as row 60, represented in the y-series; retained as a separate source-series record."
+93,[18],verified,composition,no_change,no_model_change,"Formula-to-TC assignment verified against the source table."
+139,[33],verified,composition,no_change,no_model_change,"Formula-to-TC assignment verified against the source table."
+140,[33],verified,composition,no_change,no_model_change,"Formula-to-TC assignment verified against the source table."
+141,[33],corrected,composition,Fe25.64Co25.64Ni25.64Cr23.08,no_model_change,"Previous label FeCoNiCr; TC and all descriptors unchanged."
+143,[33],corrected,composition,FeCoNiCr,no_model_change,"Previous label Fe25.3Co25.3Ni25.3Cr24.1; TC and all descriptors unchanged."
+144,[33],corrected,composition,Fe25.3Co25.3Ni25.3Cr24.1,no_model_change,"Previous label Fe25.64Co25.64Ni25.64Cr23.08; TC and all descriptors unchanged."
+148,[33],verified,composition,no_change,no_model_change,"Formula-to-TC assignment verified against the source table."
