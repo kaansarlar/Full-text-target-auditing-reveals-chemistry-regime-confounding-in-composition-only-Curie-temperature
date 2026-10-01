@@ -1,0 +1,11 @@
+feature_set,model,fold,regressor__colsample_bytree,regressor__learning_rate,regressor__max_depth,regressor__min_child_samples,regressor__n_estimators,regressor__num_leaves,regressor__subsample
+hea,LightGBM,1,0.6,0.01,5,20,400,31,1.0
+hea,LightGBM,2,0.6,0.01,3,10,100,7,1.0
+hea,LightGBM,3,0.6,0.01,3,20,200,15,0.6
+hea,LightGBM,4,0.6,0.01,3,20,200,15,0.6
+hea,LightGBM,5,0.6,0.01,5,20,400,31,1.0
+hea,LightGBM,6,0.8,0.01,8,3,400,15,1.0
+hea,LightGBM,7,0.8,0.01,-1,20,200,15,1.0
+hea,LightGBM,8,0.8,0.03,5,5,100,7,1.0
+hea,LightGBM,9,0.6,0.1,8,20,600,40,0.6
+hea,LightGBM,10,0.8,0.01,-1,20,200,15,1.0

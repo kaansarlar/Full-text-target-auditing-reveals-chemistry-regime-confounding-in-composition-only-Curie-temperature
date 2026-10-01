@@ -1,14 +1,18 @@
-# Publication-grouped validation of composition-only Curie-temperature screening
+# Target-audited, process-aware validation of Curie-temperature screening
 
 This repository contains the public reproducibility package for the manuscript:
 
-> **Publication-grouped evaluation exposes the limits of composition-only Curie-temperature screening in magnetocaloric high-entropy alloys**
+> **Full-text target auditing and process-aware validation expose the limits of composition-only Curie-temperature screening in magnetocaloric high-entropy alloys**
 
 The repository is intentionally compact. It contains the analysis-ready data, publication-group assignments, source manifests, executable analysis code, principal numerical outputs, and final figures required to audit or reproduce the reported results. Manuscript drafts, downloaded source articles, duplicate workbooks, and exploratory files that do not support a reported result are deliberately excluded.
 
 ## Version 1.0.1 metadata correction
 
 Version 1.0.1 corrects three nominal-composition labels in source rows 141, 143, and 144 after verification against the source table. The associated `TC` values, all descriptors, publication assignments, deduplication, model inputs, predictions, figures, and reported metrics are unchanged. The full audit is in `docs/DATA_CORRECTIONS.md` and `data/processed/development_curation_audit.csv`.
+
+## Version 1.1.0 target and process audit
+
+Version 1.1.0 adds a full-text audit of all 42 development sources, a conservative target-semantics partition, record-level processing/phase annotations, and a paired publication-grouped comparison of composition-only, process/phase-only, and combined feature sets. The original 141-record analysis is retained unchanged.
 
 ## Quick verification
 
@@ -17,9 +21,10 @@ python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python scripts/run_pipeline.py --mode verify
+python scripts/verify_processing_phase_extension.py
 ```
 
-This model-free verification normally completes in seconds. It checks dataset sizes, publication groups and their size distribution, descriptor–target deduplication, held-out publication coverage, headline regression metrics, development-window metrics, nested rule-selection results, historical and targeted literature outcomes, the processing-state counterexample, source manifests, reference numbering, figure availability, and the absence of redistributed source-article PDFs.
+These fast verification paths normally complete in seconds. They check dataset sizes, publication groups and their size distribution, descriptor–target deduplication, held-out publication coverage, headline regression metrics, development-window metrics, nested rule-selection results, historical and targeted literature outcomes, the v1.0.1 metadata corrections, the full-text audit partition, process-aware paired results, cluster-bootstrap direction, source manifests, figure availability, and the absence of redistributed source-article PDFs.
 
 The generated report is written to `docs/VERIFICATION_REPORT.json`.
 
@@ -43,10 +48,10 @@ python scripts/run_pipeline.py --mode figures
 |---|---|
 | `data/raw/` | Original 199-record numerical table and the record-random comparison used in the validation-design figure |
 | `data/processed/` | 199-row provenance table, 141-row analysis table, 32-record historical audit, 26-row five-paper challenge table, and processing-state sensitivity pairs |
-| `references/` | Source manifests for all analysis cohorts and the 51-entry v28 bibliography |
-| `scripts/` | Verification, grouped regression, TreeSHAP, rule-selection, external evaluation, and figure-generation code |
+| `references/` | DOI-bearing source manifests for all analysis cohorts and the original package bibliography |
+| `scripts/` | Verification, grouped regression, TreeSHAP, rule selection, external evaluation, full-text audit assembly, process-aware modelling, and figure-generation code |
 | `results/` | Supplied numerical outputs needed to audit the manuscript claims |
-| `figures/` | Final manuscript Figures 1–7 in PNG format |
+| `figures/` | Final manuscript Figures 1–8 |
 | `docs/` | Data dictionary, claim-to-file map, reviewer guide, reproducibility notes, verification report, and checksums |
 
 ## Data cohorts
@@ -55,9 +60,18 @@ python scripts/run_pipeline.py --mode figures
 - **Historical audit:** 32 records absent from the 141-row development table: 14 experimental HEA/MEA/CCA controls, 15 ordered Mn–Ni–Si-based out-of-domain stress records, and 3 simulation sensitivity records.
 - **Targeted five-paper challenge:** 26 rows retaining primary states, alternate processing states, transition-ambiguity cases, and an exclusion log. The primary classification analysis uses 13 rows. Because target relevance influenced retrieval, this cohort is a stress test rather than a population-level external validation set.
 
+## Processing, phase, and target-semantics audit
+
+The 42 development-source articles were checked at full-text level for synthesis route, thermal state, product form, phase constitution, and the meaning of the reported target temperature. Conservative record-level rules yield 102 model-eligible unique records across 34 publications. Thirty-one records from six publications are held out pending target review, and eight further records lack an unambiguous record-level process/phase mapping. No flagged or unverified record enters the process-aware model.
+
+The audit trail is in `results/processing_phase_extension/target_semantics_audit.csv` and `publication_annotation_audit.csv`; the full method and file map are in `docs/PROCESSING_PHASE_AUDIT.md`.
+
 ## Headline values
 
 - Publication-grouped HEA-descriptor LightGBM: OOF R² = 0.607, RMSE = 93.6 K, MAE = 57.7 K.
+- Target-verified composition-only sensitivity cohort: 110 records from 36 publications, OOF R² = 0.420.
+- Identical 102-record audited cohort: composition-only R² = 0.205; composition plus process/phase R² = 0.453 and MAE decreases from 77.4 to 65.4 K.
+- Paired publication-cluster bootstrap: ΔR² = +0.248 (95% interval +0.058 to +0.585) and ΔMAE = −12.0 K (−23.5 to −0.8 K).
 - Repeated nested F1-first rule selection: balanced accuracy = 0.694 ± 0.039 and MCC = 0.374 ± 0.075.
 - Historical 32-record fixed-family audit: balanced accuracy = 0.860; within the Mn-based family, balanced accuracy = 0.563 and enrichment = 1.07×.
 - Full-development candidate in the 13-record primary challenge: TP/TN/FP/FN = 8/0/4/1, balanced accuracy = 0.444, MCC = −0.192.
@@ -69,6 +83,6 @@ Copyrighted article PDFs are not redistributed. Each literature-derived record i
 
 ## Citation
 
-Please cite the associated manuscript and the archived repository release. After the GitHub release is connected to Zenodo, add the Zenodo DOI to `CITATION.cff` and to the manuscript's Data and Code Availability statements.
+Please cite the associated manuscript and the archived repository release. The DOI of the first archived release is `10.5281/zenodo.22901862`; use the DOI displayed by Zenodo for the newest version when citing the process-aware extension.
 
 Start with `docs/REVIEWER_GUIDE.md` for a short audit route and `docs/ANALYSIS_MAP.md` for exact table/figure provenance.

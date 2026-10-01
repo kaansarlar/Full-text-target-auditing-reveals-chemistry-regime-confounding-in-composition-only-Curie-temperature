@@ -1,0 +1,2 @@
+feature_set,model,candidate_budget,n_records,n_references,n_features,oof_r2,oof_rmse,oof_mae,fold_r2_mean,fold_r2_sd,fold_mae_mean,fold_mae_sd,n_negative_predictions,min_prediction_K,max_prediction_K
+hea,LightGBM,60,110,36,5,0.42003720412470835,112.7226705607884,67.80086051535262,0.5060769737658073,0.49547605044481274,71.36587666883123,54.36500127991034,0,36.69251570996157,417.7920816171662

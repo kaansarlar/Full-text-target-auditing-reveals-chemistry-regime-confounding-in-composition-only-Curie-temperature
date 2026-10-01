@@ -1,0 +1,9 @@
+{
+  "status": "post_hoc_sensitivity_analysis",
+  "cohort_rule": "target verified and record-level process/phase mapping resolved",
+  "outer_split_seed": 42,
+  "outer_splits": 10,
+  "inner_splits": 5,
+  "candidate_budget": 60,
+  "warning": "Sparse publication-linked process categories can be unseen in held-out publications; interpret as a robustness diagnostic, not a definitive production model."
+}

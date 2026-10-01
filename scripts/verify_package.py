@@ -47,6 +47,22 @@ def main() -> None:
                       "electronegativity_range", "TC"]
     check("deduplication-key", len(full.drop_duplicates(descriptor_key)) == 141,
           "descriptor–target key must produce 141 rows")
+    corrected = full.set_index("source_row")["composition"]
+    expected_compositions = {
+        141: "Fe25.64Co25.64Ni25.64Cr23.08",
+        143: "FeCoNiCr",
+        144: "Fe25.3Co25.3Ni25.3Cr24.1",
+    }
+    check(
+        "verified-composition-labels",
+        all(corrected.loc[row] == composition for row, composition in expected_compositions.items()),
+        "; ".join(f"row {row}={corrected.loc[row]}" for row in expected_compositions),
+    )
+    curation = pd.read_csv(ROOT / "data/processed/development_curation_audit.csv")
+    documented_rows = sorted(curation["source_row"].astype(int).tolist())
+    expected_audit_rows = [2, 37, 39, 60, 66, 93, 139, 140, 141, 143, 144, 148]
+    check("curation-audit", documented_rows == expected_audit_rows,
+          f"documented rows={documented_rows}")
 
     splits = pd.read_csv(ROOT / "results/grouped_cv/splits__hea__LightGBM.csv")
     test_refs = [ref for text in splits["test_references"].astype(str) for ref in text.split(";")]
@@ -133,8 +149,9 @@ def main() -> None:
     check("no-source-article-pdfs", not redistributed_articles,
           f"PDF files found={len(redistributed_articles)}")
 
+    version = (ROOT / "VERSION.txt").read_text(encoding="utf-8").strip()
     report = {
-        "package": ROOT.name,
+        "package": f"Tc-targeting-validation-v{version}",
         "status": "PASS",
         "checks_passed": len(CHECKS),
         "checks": CHECKS,

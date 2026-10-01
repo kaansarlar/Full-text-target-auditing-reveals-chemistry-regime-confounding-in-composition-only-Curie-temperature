@@ -1,9 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this dataset or analysis code, please cite the associated manuscript and archived repository release."
-title: "Publication-grouped validation of composition-only Curie-temperature screening"
+title: "Target-audited, process-aware validation of Curie-temperature screening"
 type: dataset
-version: "1.0.1"
-date-released: 2026-09-29
+version: "1.1.0"
+date-released: 2026-10-01
+repository-code: "https://github.com/kaansarlar/Publication-grouped-evaluation-exposes-the-limits-of-composition-only-Curie-temperature-screening-"
 authors:
   - family-names: "Şarlar"
     given-names: "Kağan"
@@ -13,5 +14,8 @@ keywords:
   - Curie temperature
   - materials informatics
   - publication-grouped validation
+  - target semantics
+  - processing history
+  - phase constitution
   - SHAP
   - data leakage

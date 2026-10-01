@@ -68,3 +68,8 @@ Paired as-rolled and annealed states for seven nominal compositions from the Roc
 - `results/interpretation/`: final LightGBM parameters and row-level TreeSHAP contributions.
 - `results/rule_reassessment/`: 100 outer-fold rule selections, target-specific SHAP stability, repeated OOF predictions, frozen candidate definition, and literature-set outcomes.
 - `results/literature_audits/`: historical-stratum and targeted-challenge summaries.
+- `results/processing_phase_extension/verified_publication_annotations.csv`: publication-level full-text evidence for process route, thermal state, phase constitution, product form, and target meaning.
+- `results/processing_phase_extension/processing_phase_annotation_seed.csv`: one row per unique development record, including audit status and model-eligibility decision.
+- `results/processing_phase_extension/processing_phase_annotation_state_aware.csv`: state-preserving annotation table used to audit multiple reported states for one nominal composition.
+- `results/processing_phase_extension/model_sensitivity/`: grouped composition-only results for the target-verified and strict audited cohorts.
+- `results/processing_phase_extension/process_phase_model/`: identical-cohort feature-set comparisons, paired OOF errors, and publication-cluster bootstrap intervals.

@@ -10,6 +10,7 @@
 | Table 4 — historical audit metrics and strata | `results/literature_audits/external_stratified_metrics.csv` | `scripts/historical_audit_metrics.py` |
 | Table 5 — repeated publication-grouped nested rule selection | `results/rule_reassessment/nested_rule_comparison_summary.csv` | `scripts/nested_rule_selection.py` |
 | Table 6 — historical and targeted stress-test comparison | `results/rule_reassessment/external_v1_v2_metrics.csv` | `scripts/evaluate_frozen_rules.py` |
+| Table 7 — target-audit and process-aware sensitivity | `results/processing_phase_extension/model_sensitivity/cohort_comparison.csv`, `process_phase_model/process_phase_model_comparison.csv`, `process_phase_model/paired_cluster_bootstrap.csv` | `scripts/run_target_semantics_sensitivity.py`, `scripts/run_process_phase_extension.py` |
 
 ## Figures
 
@@ -22,6 +23,7 @@
 | Figure 5 — development-set descriptor windows | `figures/Fig5.png` | `scripts/development_window_rules.py` regenerates the data and equivalent four-panel figure. |
 | Figure 6 — nested rule-validation analysis | `figures/Fig6.png` | `scripts/make_rule_figures.py` |
 | Figure 7 — record-level candidate outcomes | `figures/Fig7.png` | `scripts/make_rule_figures.py` |
+| Figure 8 — full-text audit and process-aware sensitivity | `figures/figure8_process_phase_audit.png` | `scripts/make_process_phase_figure.py` |
 
 ## Execution order
 
@@ -37,4 +39,7 @@ flowchart TD
     D --> I[Figures 2–4]
     E --> J[Figure 5]
     H --> K[Figures 6–7]
+    L[42-source full-text audit] --> M[Target-verified and process/phase-eligible cohorts]
+    M --> N[Paired grouped feature-set comparison]
+    N --> O[Table 7 + Figure 8]
 ```

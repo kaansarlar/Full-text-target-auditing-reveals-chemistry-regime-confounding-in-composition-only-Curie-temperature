@@ -1,0 +1,4 @@
+metric,observed_difference_combined_minus_composition,cluster_bootstrap_95pct_low,cluster_bootstrap_95pct_high,bootstrap_probability_of_improvement,n_bootstrap,cluster_unit
+delta_mae_K,-12.01994215257919,-23.504805779811324,-0.8233337554537618,0.9814,10000,reference_id
+delta_rmse_K,-22.262740439970372,-36.00525776923949,-6.4962127088918695,0.9981,10000,reference_id
+delta_r2,0.24827890740401581,0.05772783206309004,0.5854355251465043,0.9981,10000,reference_id
