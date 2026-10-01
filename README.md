@@ -83,6 +83,10 @@ Copyrighted article PDFs are not redistributed. Each literature-derived record i
 
 ## Citation
 
-Please cite the associated manuscript and the archived repository release. The DOI of the first archived release is `10.5281/zenodo.22901862`; use the DOI displayed by Zenodo for the newest version when citing the process-aware extension.
+Please cite the associated manuscript and the exact archived release used for the process-aware extension:
+
+> Şarlar K 2026 *Target-audited, process-aware validation of Curie-temperature screening*, version v1.1.0 (Zenodo), doi: [10.5281/zenodo.23082961](https://doi.org/10.5281/zenodo.23082961)
+
+The all-versions DOI `10.5281/zenodo.22901861` always resolves to the latest archived version.
 
 Start with `docs/REVIEWER_GUIDE.md` for a short audit route and `docs/ANALYSIS_MAP.md` for exact table/figure provenance.
