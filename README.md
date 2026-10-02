@@ -98,7 +98,7 @@ Copyrighted article PDFs are not redistributed. Each literature-derived record i
 
 Please cite the associated manuscript and the archived release:
 
-> Şarlar K 2026 *Full-text target auditing reveals chemistry-regime confounding in composition-only Curie-temperature screening*, version v1.2.0 (Zenodo), doi: [10.5281/zenodo.22901861](https://doi.org/10.5281/zenodo.22901861)
+> Şarlar K 2026 *Full-text target auditing reveals chemistry-regime confounding in composition-only Curie-temperature screening*, version v1.2.0 (Zenodo), doi: [10.5281/zenodo.23102726](https://doi.org/10.5281/zenodo.23102726)
 
 The all-versions DOI `10.5281/zenodo.22901861` always resolves to the latest archived version.
 

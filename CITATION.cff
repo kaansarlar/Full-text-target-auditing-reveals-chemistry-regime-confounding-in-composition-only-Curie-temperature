@@ -6,8 +6,11 @@ version: "1.2.0"
 date-released: 2026-10-02
 repository-code: "https://github.com/kaansarlar/Publication-grouped-evaluation-exposes-the-limits-of-composition-only-Curie-temperature-screening-"
 repository-artifact: "https://github.com/kaansarlar/Publication-grouped-evaluation-exposes-the-limits-of-composition-only-Curie-temperature-screening-/releases/tag/v1.2.0"
-doi: "10.5281/zenodo.22901861"
+doi: "10.5281/zenodo.23102726"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23102726"
+    description: "Zenodo DOI for release v1.2.0"
   - type: doi
     value: "10.5281/zenodo.22901861"
     description: "Zenodo concept DOI resolving to the latest archived release"
