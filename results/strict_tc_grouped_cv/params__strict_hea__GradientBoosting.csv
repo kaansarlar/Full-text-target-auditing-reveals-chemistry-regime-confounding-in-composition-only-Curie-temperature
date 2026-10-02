@@ -1,0 +1,11 @@
+feature_set,model,fold,regressor__learning_rate,regressor__max_depth,regressor__max_features,regressor__min_samples_leaf,regressor__n_estimators,regressor__subsample
+strict_hea,GradientBoosting,1,0.05,2,sqrt,3,400,0.6
+strict_hea,GradientBoosting,2,0.01,5,0.8,3,100,0.6
+strict_hea,GradientBoosting,3,0.05,2,sqrt,3,400,0.6
+strict_hea,GradientBoosting,4,0.01,5,0.8,3,100,0.6
+strict_hea,GradientBoosting,5,0.01,5,0.8,3,100,0.6
+strict_hea,GradientBoosting,6,0.1,5,0.8,3,800,1.0
+strict_hea,GradientBoosting,7,0.01,5,0.8,3,100,0.6
+strict_hea,GradientBoosting,8,0.1,4,sqrt,2,200,0.9
+strict_hea,GradientBoosting,9,0.01,2,,1,100,0.9
+strict_hea,GradientBoosting,10,0.01,5,,1,100,0.8

@@ -1,0 +1,11 @@
+feature_set,model,fold,regressor__alpha,regressor__fit_intercept
+strict_hea,Ridge,1,5,True
+strict_hea,Ridge,2,100,True
+strict_hea,Ridge,3,3,True
+strict_hea,Ridge,4,50,True
+strict_hea,Ridge,5,7,True
+strict_hea,Ridge,6,70,True
+strict_hea,Ridge,7,100,True
+strict_hea,Ridge,8,10,True
+strict_hea,Ridge,9,3,True
+strict_hea,Ridge,10,10,True

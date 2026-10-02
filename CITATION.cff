@@ -1,16 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this dataset or analysis code, please cite the associated manuscript and archived repository release."
-title: "Target-audited, process-aware validation of Curie-temperature screening"
+title: "Full-text target auditing reveals chemistry-regime confounding in composition-only Curie-temperature screening"
 type: software
-version: "1.1.0"
-date-released: 2026-10-01
+version: "1.2.0"
+date-released: 2026-10-02
 repository-code: "https://github.com/kaansarlar/Publication-grouped-evaluation-exposes-the-limits-of-composition-only-Curie-temperature-screening-"
-repository-artifact: "https://github.com/kaansarlar/Publication-grouped-evaluation-exposes-the-limits-of-composition-only-Curie-temperature-screening-/releases/tag/v1.1.0"
-doi: "10.5281/zenodo.23082961"
+repository-artifact: "https://github.com/kaansarlar/Publication-grouped-evaluation-exposes-the-limits-of-composition-only-Curie-temperature-screening-/releases/tag/v1.2.0"
+doi: "10.5281/zenodo.22901861"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.23082961"
-    description: "Zenodo DOI for release v1.1.0"
+    value: "10.5281/zenodo.22901861"
+    description: "Zenodo concept DOI resolving to the latest archived release"
 authors:
   - family-names: "Şarlar"
     given-names: "Kağan"
@@ -21,6 +21,7 @@ keywords:
   - materials informatics
   - publication-grouped validation
   - target semantics
+  - chemistry-regime confounding
   - processing history
   - phase constitution
   - SHAP

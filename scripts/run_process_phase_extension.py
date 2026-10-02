@@ -30,11 +30,9 @@ from publication_grouped_analysis import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data" / "processed" / "development_unique_141.csv"
+DATA = ROOT / "results" / "strict_tc_audit" / "strict_experimental_tc_79.csv"
 ANNOTATION = ROOT / "results" / "processing_phase_extension" / "processing_phase_annotation_seed.csv"
-SENSITIVITY = ROOT / "results" / "processing_phase_extension" / "model_sensitivity" / "cohort_comparison.csv"
-DEFAULT_OUT = ROOT / "results" / "processing_phase_extension" / "process_phase_model"
-COMPOSITION_OOF = ROOT / "results" / "processing_phase_extension" / "model_sensitivity" / "process_phase_eligible" / "oof__hea__LightGBM.csv"
+DEFAULT_OUT = ROOT / "results" / "strict_tc_process_phase"
 CATEGORICAL = ["process_route", "thermal_state", "phase_class", "product_form"]
 
 warnings.filterwarnings(
@@ -44,11 +42,12 @@ warnings.filterwarnings(
 )
 
 
-def paired_cluster_bootstrap(combined_oof: Path, output_dir: Path, n_boot: int = 10000) -> None:
+def paired_cluster_bootstrap(composition_oof: Path, combined_oof: Path, output_dir: Path, n_boot: int = 10000) -> None:
     """Compare fixed OOF predictions with publication-cluster bootstrap CIs."""
-    composition = pd.read_csv(COMPOSITION_OOF)[
-        ["source_row", "reference_id", "y_true_TC", "y_pred_TC", "absolute_error_K"]
+    composition = pd.read_csv(composition_oof)[
+        ["source_row", "reference_id", "TC", "y_pred_TC", "absolute_error_K"]
     ].rename(columns={
+        "TC": "y_true_TC",
         "y_pred_TC": "composition_prediction_K",
         "absolute_error_K": "composition_absolute_error_K",
     })
@@ -195,29 +194,13 @@ def main() -> None:
     args = parser.parse_args()
 
     data = pd.read_csv(DATA).reset_index(drop=True)
-    annotation = pd.read_csv(ANNOTATION).reset_index(drop=True)
-    keys = ["source_row", "composition", "reference_id", "TC"]
-    if len(data) != len(annotation) or not data[keys].equals(annotation[keys]):
-        raise RuntimeError("Annotation and analysis tables are not row-aligned")
-    eligible = annotation["model_eligibility"].eq("eligible_process_phase_extension")
-    df = data.loc[eligible].reset_index(drop=True)
-    for field in CATEGORICAL:
-        df[field] = annotation.loc[eligible, field].astype(str).reset_index(drop=True)
-
-    baseline = pd.read_csv(SENSITIVITY)
-    baseline = baseline.loc[baseline["cohort"].eq("process_phase_eligible")].iloc[0]
-    rows = [{
-        "feature_set": "composition_only",
-        "n_records": int(baseline.n_records),
-        "n_references": int(baseline.n_references),
-        "n_numeric_features": len(HEA_FEATURES),
-        "n_categorical_fields": 0,
-        "oof_r2": float(baseline.oof_r2),
-        "oof_rmse": float(baseline.oof_rmse),
-        "oof_mae": float(baseline.oof_mae),
-        "fold_r2_mean": float(baseline.fold_r2_mean),
-        "fold_r2_sd": float(baseline.fold_r2_sd),
-    }]
+    annotation = pd.read_csv(ANNOTATION)[["source_row", "model_eligibility", *CATEGORICAL]].copy()
+    df = data.merge(annotation, on="source_row", how="left", validate="one_to_one")
+    df = df.loc[df["model_eligibility"].eq("eligible_process_phase_extension")].reset_index(drop=True)
+    if len(df) != 71 or df.reference_id.nunique() != 24:
+        raise RuntimeError("Expected audited 71-record/24-publication process cohort")
+    rows = [fit_feature_set(df, "composition_only", HEA_FEATURES, [],
+                            args.candidate_budget, args.n_jobs, args.output_dir)]
     rows.append(fit_feature_set(df, "process_phase_only", [], CATEGORICAL,
                                 args.candidate_budget, args.n_jobs, args.output_dir))
     rows.append(fit_feature_set(df, "composition_plus_process_phase", HEA_FEATURES, CATEGORICAL,
@@ -227,6 +210,7 @@ def main() -> None:
     summary["delta_mae_K_vs_composition_only"] = summary["oof_mae"] - summary.loc[0, "oof_mae"]
     summary.to_csv(args.output_dir / "process_phase_model_comparison.csv", index=False)
     paired_cluster_bootstrap(
+        args.output_dir / "oof_predictions__composition_only.csv",
         args.output_dir / "oof_predictions__composition_plus_process_phase.csv",
         args.output_dir,
     )

@@ -1,8 +1,8 @@
-# Target-audited, process-aware validation of Curie-temperature screening
+# Full-text target auditing of Curie-temperature screening
 
 This repository contains the public reproducibility package for the manuscript:
 
-> **Full-text target auditing and process-aware validation expose the limits of composition-only Curie-temperature screening in magnetocaloric high-entropy alloys**
+> **Full-text target auditing reveals chemistry-regime confounding in composition-only Curie-temperature screening of magnetocaloric high-entropy alloys**
 
 The repository is intentionally compact. It contains the analysis-ready data, publication-group assignments, source manifests, executable analysis code, principal numerical outputs, and final figures required to audit or reproduce the reported results. Manuscript drafts, downloaded source articles, duplicate workbooks, and exploratory files that do not support a reported result are deliberately excluded.
 
@@ -14,6 +14,10 @@ Version 1.0.1 corrects three nominal-composition labels in source rows 141, 143,
 
 Version 1.1.0 adds a full-text audit of all 42 development sources, a conservative target-semantics partition, record-level processing/phase annotations, and a paired publication-grouped comparison of composition-only, process/phase-only, and combined feature sets. The original 141-record analysis is retained unchanged.
 
+## Version 1.2.0 strict-TC and chemistry-regime audit
+
+Version 1.2.0 applies a record-level full-text target audit to all 141 unique development rows. It retains 79 directly reported experimental Curie-temperature records from 26 publications, documents 62 exclusions by reason, corrects two transcription errors against the primary sources, and assigns three prespecified chemistry families. The release adds equal-budget grouped model comparison, repeated grouped partitions, within-family and leave-one-family-out tests, a direct target-window classifier, and a strict-cohort process/phase sensitivity analysis. These analyses show that apparently useful pooled performance is substantially explained by chemistry-regime separation and does not transfer within or across families.
+
 ## Quick verification
 
 ```bash
@@ -22,9 +26,10 @@ source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python scripts/run_pipeline.py --mode verify
 python scripts/verify_processing_phase_extension.py
+python scripts/verify_strict_tc_extension.py
 ```
 
-These fast verification paths normally complete in seconds. They check dataset sizes, publication groups and their size distribution, descriptor–target deduplication, held-out publication coverage, headline regression metrics, development-window metrics, nested rule-selection results, historical and targeted literature outcomes, the v1.0.1 metadata corrections, the full-text audit partition, process-aware paired results, cluster-bootstrap direction, source manifests, figure availability, and the absence of redistributed source-article PDFs.
+These fast verification paths normally complete in seconds. They check dataset sizes, publication groups and their size distribution, descriptor–target deduplication, held-out publication coverage, headline regression metrics, development-window metrics, nested rule-selection results, historical and targeted literature outcomes, the v1.0.1 metadata corrections, the strict full-text audit partition, chemistry-family analyses, direct classification, strict-cohort process/phase sensitivity, source manifests, figure availability, and the absence of redistributed source-article PDFs.
 
 The generated report is written to `docs/VERIFICATION_REPORT.json`.
 
@@ -66,12 +71,20 @@ The 42 development-source articles were checked at full-text level for synthesis
 
 The audit trail is in `results/processing_phase_extension/target_semantics_audit.csv` and `publication_annotation_audit.csv`; the full method and file map are in `docs/PROCESSING_PHASE_AUDIT.md`.
 
+## Strict experimental Curie-temperature cohort
+
+The v1.2.0 full-text audit retains 79 directly reported experimental Curie temperatures from 26 publications. The 62 excluded rows comprise 21 Néel temperatures, 18 secondary-source-only values, 7 proxy temperatures, 7 state-ambiguous values, 6 other non-Curie transitions, and 3 conflicting assignments. The strict cohort contains 32 3d-transition-metal, 25 rare-earth-rich, and 22 transition-metal–metalloid records. Family membership explains 60.5% of total target variance.
+
+All decisions and corrected values are in `results/strict_tc_audit/strict_tc_record_audit.csv`; the retained table is `strict_experimental_tc_79.csv`.
+
 ## Headline values
 
 - Publication-grouped HEA-descriptor LightGBM: OOF R² = 0.607, RMSE = 93.6 K, MAE = 57.7 K.
-- Target-verified composition-only sensitivity cohort: 110 records from 36 publications, OOF R² = 0.420.
-- Identical 102-record audited cohort: composition-only R² = 0.205; composition plus process/phase R² = 0.453 and MAE decreases from 77.4 to 65.4 K.
-- Paired publication-cluster bootstrap: ΔR² = +0.248 (95% interval +0.058 to +0.585) and ΔMAE = −12.0 K (−23.5 to −0.8 K).
+- Strict 79-record equal-budget grouped comparison: SVR is best, with OOF R² = 0.610, RMSE = 101.2 K, and MAE = 66.3 K.
+- Across five repeated grouped partitions, SVR gives R² = 0.468 ± 0.126; a family-mean baseline gives R² = 0.505 ± 0.004.
+- Within-family R² values are 0.198 (3d-TM), −1.791 (RE-rich), and −0.297 (TM-metalloid); every leave-one-family-out R² is negative.
+- Direct grouped logistic classification of the 250–350 K window gives balanced accuracy = 0.726, MCC = 0.433, and enrichment = 1.59×.
+- On the strict 71-record/24-publication process cohort, adding process/phase fields changes R² from 0.305 to 0.328; the paired cluster-bootstrap interval crosses zero (ΔR² 95% interval −0.083 to +0.093).
 - Repeated nested F1-first rule selection: balanced accuracy = 0.694 ± 0.039 and MCC = 0.374 ± 0.075.
 - Historical 32-record fixed-family audit: balanced accuracy = 0.860; within the Mn-based family, balanced accuracy = 0.563 and enrichment = 1.07×.
 - Full-development candidate in the 13-record primary challenge: TP/TN/FP/FN = 8/0/4/1, balanced accuracy = 0.444, MCC = −0.192.
@@ -83,9 +96,9 @@ Copyrighted article PDFs are not redistributed. Each literature-derived record i
 
 ## Citation
 
-Please cite the associated manuscript and the exact archived release used for the process-aware extension:
+Please cite the associated manuscript and the archived release:
 
-> Şarlar K 2026 *Target-audited, process-aware validation of Curie-temperature screening*, version v1.1.0 (Zenodo), doi: [10.5281/zenodo.23082961](https://doi.org/10.5281/zenodo.23082961)
+> Şarlar K 2026 *Full-text target auditing reveals chemistry-regime confounding in composition-only Curie-temperature screening*, version v1.2.0 (Zenodo), doi: [10.5281/zenodo.22901861](https://doi.org/10.5281/zenodo.22901861)
 
 The all-versions DOI `10.5281/zenodo.22901861` always resolves to the latest archived version.
 

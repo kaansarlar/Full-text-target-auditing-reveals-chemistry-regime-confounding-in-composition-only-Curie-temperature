@@ -4,11 +4,12 @@
 
 1. Run `python scripts/run_pipeline.py --mode verify`.
 2. Run `python scripts/verify_processing_phase_extension.py`.
-3. Inspect `docs/VERIFICATION_REPORT.json`; every package check should report `PASS`.
-4. Open `results/grouped_cv/publication_grouped_model_summary.csv` and select `feature_set=hea`, `model=LightGBM` for the principal regression result.
-5. Open `results/processing_phase_extension/process_phase_model/process_phase_model_comparison.csv` and `paired_cluster_bootstrap.csv` for the identical-cohort process-aware comparison.
-6. Open `results/processing_phase_extension/target_semantics_audit.csv` for every target-review decision.
-7. Open `docs/DATA_CORRECTIONS.md` and `data/processed/development_curation_audit.csv` for the retained v1.0.1 metadata audit.
+3. Run `python scripts/verify_strict_tc_extension.py`.
+4. Inspect `docs/VERIFICATION_REPORT.json`; every package check should report `PASS`.
+5. Open `results/strict_tc_audit/strict_tc_record_audit.csv` for every v1.2.0 target decision and correction.
+6. Open `results/strict_tc_grouped_cv/summary__strict_hea__SVR.csv`, `results/strict_tc_robustness/`, and `results/strict_tc_classification/direct_classifier_summary.csv` for the principal strict-cohort results.
+7. Open `results/strict_tc_process_phase/process_phase_model_comparison.csv` and `paired_cluster_bootstrap.csv` for the identical-cohort process-aware sensitivity.
+8. Open `docs/DATA_CORRECTIONS.md` and `data/processed/development_curation_audit.csv` for the retained v1.0.1 metadata audit.
 
 ## Claim-to-file shortcuts
 
@@ -25,6 +26,12 @@
 | Target-audit partition and reasons | `results/processing_phase_extension/target_semantics_audit.csv`, `publication_annotation_audit.csv` |
 | Target-verified and strict-cohort sensitivity | `results/processing_phase_extension/model_sensitivity/cohort_comparison.csv` |
 | Process/phase contribution on identical records and folds | `results/processing_phase_extension/process_phase_model/process_phase_model_comparison.csv`, `paired_record_errors.csv`, `paired_cluster_bootstrap.csv` |
+| Strict experimental Curie-temperature inclusion/exclusion decisions | `results/strict_tc_audit/strict_tc_record_audit.csv`, `strict_tc_exclusion_counts.csv` |
+| Chemistry-family composition and variance partition | `results/strict_tc_audit/strict_tc_family_summary.csv`, `results/strict_tc_robustness/family_variance_decomposition.csv` |
+| Strict-cohort grouped model comparison | `results/strict_tc_grouped_cv/summary__strict_hea__*.csv` |
+| Repeated partitions, within-family, and leave-one-family-out tests | `results/strict_tc_robustness/repeated_partition_metrics.csv`, `within_family_metrics.csv`, `leave_family_out_metrics.csv` |
+| Direct 250–350 K classification | `results/strict_tc_classification/direct_classifier_summary.csv` |
+| Strict-cohort process/phase sensitivity | `results/strict_tc_process_phase/process_phase_model_comparison.csv`, `paired_cluster_bootstrap.csv` |
 
 ## Prespecified limitations
 
@@ -34,6 +41,8 @@
 - The five-paper set was retrieved with target relevance in mind and is therefore reported as a stress test.
 - Composition-only descriptors cannot encode annealing, phase fractions, disorder, or multiple transition assignments.
 - The process-aware extension is post hoc; sparse categorical levels can remain publication specific, and its bootstrap conditions on the completed manual audit.
+- Chemistry families are broad post-audit strata used to diagnose regime confounding, not universal materials classes.
+- The strict cohort remains small (79 records across 26 publications), so family-specific and leave-family-out estimates are stress tests rather than production error guarantees.
 - The publication-grouped RMSE of 93.6 K is comparable to the 100 K width of the 250–350 K interval; the regression is intended for prioritization, not confident single-composition window assignment.
 
 ## Source audit

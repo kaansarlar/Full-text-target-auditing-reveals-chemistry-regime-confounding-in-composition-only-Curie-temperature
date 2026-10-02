@@ -1,0 +1,72 @@
+source_row,composition,reference_id,TC,process_route,thermal_state,phase_class,product_form,feature_set,y_pred_TC,residual_TC,absolute_error_K
+10,Gd20Ho20Er20Al20 Fe 20,[3],55.0,melt_extraction,as_extracted,amorphous,microwire,composition_only,87.92019099924691,-32.92019099924691,32.92019099924691
+11,Gd20Ho20Er20Al20 Co 20,[3],39.0,melt_extraction,as_extracted,amorphous,microwire,composition_only,77.25351136278817,-38.253511362788174,38.253511362788174
+12,Gd20Ho20Er20Al20 Ni 20,[3],25.0,melt_extraction,as_extracted,amorphous,microwire,composition_only,76.18808890036452,-51.18808890036452,51.18808890036452
+14,GdTbHoErLa,[4],127.0,arc_melting,as_cast,single_phase_hcp,ingot,composition_only,139.4278772934021,-12.427877293402105,12.427877293402105
+15,GdTbHoErLaY,[4],120.0,arc_melting,as_cast,single_phase_hcp,ingot,composition_only,140.52081837453315,-20.52081837453315,20.52081837453315
+33,Gd25Co25Al25Ho24Y1,[9],51.0,arc_melting+melt_spinning,as_spun,amorphous,ribbon,composition_only,110.03492478842489,-59.03492478842489,59.03492478842489
+34,Gd25Co25Al25Ho20Y5,[9],49.0,arc_melting+melt_spinning,as_spun,amorphous,ribbon,composition_only,110.03492478842489,-61.03492478842489,61.03492478842489
+35,Gd25Co25Al25Ho15Y10,[9],47.0,arc_melting+melt_spinning,as_spun,amorphous,ribbon,composition_only,110.03492478842489,-63.03492478842489,63.03492478842489
+37,Gd20Dy20Er20Co20Al20,[10],44.0,arc_melting+copper_mold_casting,as_cast,amorphous,bulk_metallic_glass,composition_only,45.37365326573107,-1.3736532657310718,1.3736532657310718
+39,(Gd20Dy20Er20Co20Al20)Si0.5,[10],44.0,arc_melting+copper_mold_casting,as_cast,amorphous,bulk_metallic_glass,composition_only,54.2298092164497,-10.229809216449702,10.229809216449702
+41,(Gd20Dy20Er20Co20Al20)Si1,[10],44.0,arc_melting+copper_mold_casting,as_cast,amorphous,bulk_metallic_glass,composition_only,54.2298092164497,-10.229809216449702,10.229809216449702
+43,(Gd20Dy20Er20Co20Al20)Si3,[10],44.0,arc_melting+copper_mold_casting,as_cast,amorphous,bulk_metallic_glass,composition_only,54.2298092164497,-10.229809216449702,10.229809216449702
+45,(Gd36Tb20Co20Al24)97Fe3(micro_100),[11],98.0,arc_melting+suction_casting+melt_extraction,current_annealed_100e6_A_m-2_480s_air,amorphous_nanocrystalline,microwire,composition_only,36.9644874276946,61.0355125723054,61.0355125723054
+46,(Gd36Tb20Co20Al24)97Fe3(micro_70),[11],102.0,arc_melting+suction_casting+melt_extraction,current_annealed_75e6_A_m-2_480s_air,amorphous_nanocrystalline,microwire,composition_only,36.9644874276946,65.03551257230541,65.03551257230541
+53,(Gd36Tb20Co20Al24)97Fe3(micro_100),[11],99.0,arc_melting+suction_casting+melt_extraction,current_annealed_100e6_A_m-2_480s_air,amorphous_nanocrystalline,microwire,composition_only,36.9644874276946,62.0355125723054,62.0355125723054
+57,V0.85FeCoNiCu1.15,[12],329.0,arc_melting,as_cast,two_ccp_solid_solutions_plus_sigma,ingot,composition_only,215.28828145301065,113.71171854698935,113.71171854698935
+60,(MnNiSi)1-x(FeCoGe)x x=0.4,[13],271.0,arc_melting+vacuum_annealing+water_quenching,annealed_1023K_72h_vacuum_water_quenched,single_phase_Ni2In_hexagonal,ingot,composition_only,328.55074899610247,-57.55074899610247,57.55074899610247
+61,(MnNiSi)1-x(FeCoGe)x x=0.42,[13],224.0,arc_melting+vacuum_annealing+water_quenching,annealed_1023K_72h_vacuum_water_quenched,single_phase_Ni2In_hexagonal,ingot,composition_only,328.55074899610247,-104.55074899610247,104.55074899610247
+62,(MnNiSi)1-x(FeCoGe)x x=0.45,[13],232.0,arc_melting+vacuum_annealing+water_quenching,annealed_1023K_72h_vacuum_water_quenched,single_phase_Ni2In_hexagonal,ingot,composition_only,328.55074899610247,-96.55074899610247,96.55074899610247
+63,(MnNiSi)1-x(FeCoGe)x x=0.47,[13],235.0,arc_melting+vacuum_annealing+water_quenching,annealed_1023K_72h_vacuum_water_quenched,single_phase_Ni2In_hexagonal,ingot,composition_only,328.55074899610247,-93.55074899610247,93.55074899610247
+64,(MnNi)0.6Si1-y(FeCo)0.4Gey  y=0.36,[13],327.6,arc_melting+vacuum_annealing+water_quenching,annealed_1023K_72h_vacuum_water_quenched,Ni2In_hexagonal_plus_TiNiSi_orthorhombic,ingot,composition_only,335.88797015961364,-8.287970159613621,8.287970159613621
+65,(MnNi)0.6Si1-y(FeCo)0.4Gey  y=0.38,[13],308.8,arc_melting+vacuum_annealing+water_quenching,annealed_1023K_72h_vacuum_water_quenched,Ni2In_hexagonal_plus_TiNiSi_orthorhombic,ingot,composition_only,328.55074899610247,-19.75074899610246,19.75074899610246
+66,(MnNi)0.6Si1-y(FeCo)0.4Gey  y=0.4,[13],271.3,arc_melting+vacuum_annealing+water_quenching,annealed_1023K_72h_vacuum_water_quenched,Ni2In_hexagonal_plus_TiNiSi_orthorhombic,ingot,composition_only,328.55074899610247,-57.25074899610246,57.25074899610246
+67,(MnNi)0.6Si1-y(FeCo)0.4Gey  y=0.42,[13],295.5,arc_melting+vacuum_annealing+water_quenching,annealed_1023K_72h_vacuum_water_quenched,Ni2In_hexagonal_plus_TiNiSi_orthorhombic,ingot,composition_only,328.55074899610247,-33.05074899610247,33.05074899610247
+80,CoCuFeMnNi,[15],395.0,arc_melting+melt_spinning,as_spun,single_phase_fcc,melt_spun_flakes,composition_only,279.1604298594062,115.83957014059382,115.83957014059382
+81,CoCu0.975FeMn1.025Ni,[15],321.0,arc_melting+melt_spinning,as_spun,single_phase_fcc,melt_spun_flakes,composition_only,279.1604298594062,41.83957014059382,41.83957014059382
+82,CoCu0.95FeMn1.05Ni,[15],297.0,arc_melting+melt_spinning,as_spun,single_phase_fcc,melt_spun_flakes,composition_only,279.1604298594062,17.83957014059382,17.83957014059382
+83,CoCu0.925FeMn1.075Ni,[15],279.0,arc_melting+melt_spinning,as_spun,single_phase_fcc,melt_spun_flakes,composition_only,279.1604298594062,-0.16042985940617882,0.16042985940617882
+84,CoCu0.9FeMn1.1Ni,[15],264.0,arc_melting+melt_spinning,as_spun,single_phase_fcc,melt_spun_flakes,composition_only,279.1604298594062,-15.160429859406179,15.160429859406179
+85,CoCuFe0.975Mn1.025Ni,[15],299.0,arc_melting+melt_spinning,as_spun,single_phase_fcc,melt_spun_flakes,composition_only,279.1604298594062,19.83957014059382,19.83957014059382
+86,CoCuFe0.95Mn1.05Ni,[15],292.0,arc_melting+melt_spinning,as_spun,single_phase_fcc,melt_spun_flakes,composition_only,279.1604298594062,12.839570140593821,12.839570140593821
+90,Fe30Co30Ni30Cr10,[17],651.0,arc_melting+annealing+water_quenching,annealed_1123K_30min_water_quenched,single_phase_fcc,ingot,composition_only,120.28542190914366,530.7145780908563,530.7145780908563
+91,Fe30Co30Ni30Mn10,[17],741.0,arc_melting+annealing+water_quenching,annealed_1123K_30min_water_quenched,single_phase_fcc,ingot,composition_only,366.1303905974291,374.8696094025709,374.8696094025709
+92,Fe30Co30Ni30Cr5Mn5,[17],696.0,arc_melting+annealing+water_quenching,annealed_1123K_30min_water_quenched,single_phase_fcc,ingot,composition_only,287.26449213207536,408.73550786792464,408.73550786792464
+93,CoFeNiCr1.0Cu0.0,[18],113.0,arc_melting+suction_casting,as_cast,single_phase_fcc,suction_cast_rod,composition_only,545.8356248383957,-432.8356248383957,432.8356248383957
+94,CoFeNiCr1.0Cu0.5,[18],120.0,arc_melting+suction_casting,as_cast,fcc_with_cu_rich_segregation,suction_cast_rod,composition_only,394.416421784722,-274.416421784722,274.416421784722
+95,CoFeNiCr1.0Cu1.0,[18],110.0,arc_melting+suction_casting,as_cast,dual_phase_fcc,suction_cast_rod,composition_only,384.9972017479141,-274.9972017479141,274.9972017479141
+96,CoFeNiCr0.8Cu1.0,[18],223.0,arc_melting+suction_casting,as_cast,fcc_with_cu_rich_segregation,suction_cast_rod,composition_only,392.1683157052536,-169.16831570525358,169.16831570525358
+102,GdTbDyHoErTmCoAl,[22],35.0,arc_melting+melt_spinning,as_spun,fully_amorphous,ribbon,composition_only,110.45513956100045,-75.45513956100045,75.45513956100045
+103,GdTbDyHoErTmCoNi,[22],40.0,arc_melting+melt_spinning,as_spun,amorphous_plus_hcp_nanocrystals,ribbon,composition_only,83.07406621591808,-43.07406621591808,43.07406621591808
+106,GdTbHoErLaY,[23],120.0,arc_melting+induction_melt_spinning,as_spun,single_phase_hcp,ribbon,composition_only,128.00726350290572,-8.007263502905715,8.007263502905715
+111,LaFe10.8Cr0.2Si2,[25],219.0,arc_melting+vacuum_annealing+water_quenching,annealed_1323K_9d_vacuum_water_quenched,LaFeSi13_plus_alphaFe_or_La_rich_secondary,ingot,composition_only,377.4334248457381,-158.4334248457381,158.4334248457381
+112,LaFe10Co0.5Ni0.5Si2,[25],285.0,arc_melting+vacuum_annealing+water_quenching,annealed_1323K_9d_vacuum_water_quenched,LaFeSi13_plus_alphaFe_or_La_rich_secondary,ingot,composition_only,415.65683030622233,-130.65683030622233,130.65683030622233
+113,LaFe10.25Co0.25Ni0.25Cr0.25Si2,[25],247.0,arc_melting+vacuum_annealing+water_quenching,annealed_1323K_9d_vacuum_water_quenched,predominantly_single_phase_LaFeSi13,ingot,composition_only,377.4334248457381,-130.4334248457381,130.4334248457381
+114,Mn27Cr7Ni33Ge25Si8,[26],412.0,arc_melting,as_cast,single_phase_orthorhombic_pnma,ingot,composition_only,349.3957415469504,62.604258453049624,62.604258453049624
+118,Fe25Co25Ni25Mo5P10B10,[27],560.0,torch_alloying+fluxing+J_quenching,as_quenched,amorphous,bulk_metallic_glass_rod,composition_only,349.97644687403476,210.02355312596524,210.02355312596524
+125,Fe26.7Ni26.7Ga15.6Mn20Si11,[29],322.0,arc_melting+suction_casting,as_quenched,single_phase_bcc,suction_cast_rod,composition_only,438.627535348284,-116.62753534828403,116.62753534828403
+126,Fe26.7Ni26.7Ga15.6Mn20Si11,[29],334.0,arc_melting+suction_casting,annealed_700K_1h_Ar_slow_cooled,single_phase_bcc,suction_cast_rod,composition_only,438.627535348284,-104.62753534828403,104.62753534828403
+127,Al0.44Cr0.25MnFeCo0.05Ni0.2,[30],340.0,arc_melting+melt_spinning,as_spun,single_phase_bcc,ribbon,composition_only,400.46876817313847,-60.46876817313847,60.46876817313847
+128,Mn22.3Fe22.2Ni22.2Ge16.65Si16.65,[31],137.0,arc_melting,as_cast,single_phase_hcp,ingot,composition_only,233.25608277027385,-96.25608277027385,96.25608277027385
+133,Mn0.94Cr0.3Fe0.5Co0.2Ni0.5Al0.3,[32],321.0,arc_melting,as_cast,dual_phase_bcc_fcc,ingot,composition_only,256.9826649897028,64.01733501029719,64.01733501029719
+152,Fe30.7Ni25.7Ga14.6Mn19Si10,[34],442.0,arc_melting+suction_casting,as_quenched,single_phase_bcc,suction_cast_sample,composition_only,304.4219782022003,137.5780217977997,137.5780217977997
+153,Fe30.7Ni25.7Ga14.6Mn19Si10,[34],462.0,arc_melting+suction_casting,annealed_500K_1h_Ar_slow_cooled,single_phase_bcc,suction_cast_sample,composition_only,304.4219782022003,157.5780217977997,157.5780217977997
+163,Mn20Al20Co14Fe20Cr26,[36],268.0,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,270.4612839341737,-2.461283934173707,2.461283934173707
+164,Mn20Al20Co14Fe20Cr26,[36],268.0,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,270.4612839341737,-2.461283934173707,2.461283934173707
+165,Mn20Al20Co14Fe21Cr25,[36],280.0,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,270.4612839341737,9.538716065826293,9.538716065826293
+166,Mn20Al20Co14Fe21Cr25,[36],280.0,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,270.4612839341737,9.538716065826293,9.538716065826293
+167,Mn20Al20Co14Fe22Cr24,[36],300.0,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,270.4612839341737,29.538716065826293,29.538716065826293
+168,Mn20Al20Co14Fe22Cr24,[36],300.0,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,270.4612839341737,29.538716065826293,29.538716065826293
+169,Mn20Al20Co14Fe23Cr23,[36],310.0,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,270.4612839341737,39.53871606582629,39.53871606582629
+170,Mn20Al20Co14Fe23Cr23,[36],310.0,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,270.4612839341737,39.53871606582629,39.53871606582629
+171,Mn20Cr14Ni33Ge25Si8,[37],361.0,arc_melting,as_cast,single_phase_orthorhombic_pnma,ingot,composition_only,338.17621147787395,22.82378852212605,22.82378852212605
+172,Mn20Cr14Ni33Ge25Si8,[37],361.0,arc_melting,as_cast,single_phase_orthorhombic_pnma,ingot,composition_only,338.17621147787395,22.82378852212605,22.82378852212605
+175,Mn24Cr10Ni33Ge25Si8,[37],387.0,arc_melting,as_cast,single_phase_orthorhombic_pnma,ingot,composition_only,401.5860432945926,-14.586043294592628,14.586043294592628
+176,Mn24Cr10Ni33Ge25Si8,[37],387.0,arc_melting,as_cast,single_phase_orthorhombic_pnma,ingot,composition_only,401.5860432945926,-14.586043294592628,14.586043294592628
+179,Al20Mn20Fe20Co14.5Cr25.5,[38],282.8,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,276.3089135011939,6.491086498806112,6.491086498806112
+181,Al20Mn20Fe20Co15.5Cr24.5,[38],313.7,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,280.4556216278937,33.24437837210627,33.24437837210627
+183,Al20Mn20Fe20Co16.5Cr23.5,[38],345.8,arc_melting,as_cast,single_phase_bcc,ingot,composition_only,280.4556216278937,65.34437837210629,65.34437837210629
+185,Dy27Er27Ni26Al20,[39],15.0,arc_melting+copper_mold_casting,as_cast,amorphous,bulk_metallic_glass,composition_only,95.0421617941824,-80.0421617941824,80.0421617941824
+186,Dy18Er18Y18Ni26Al20,[39],10.0,arc_melting+copper_mold_casting,as_cast,amorphous,bulk_metallic_glass,composition_only,77.74352398254085,-67.74352398254085,67.74352398254085
+187,Dy13.5Er13.5Y13.5Gd13.5Ni26Al20,[39],22.0,arc_melting+copper_mold_casting,as_cast,amorphous,bulk_metallic_glass,composition_only,77.74352398254085,-55.74352398254085,55.74352398254085

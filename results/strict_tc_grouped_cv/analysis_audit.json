@@ -1,0 +1,22 @@
+{
+  "n_records": 79,
+  "n_publications": 26,
+  "features": [
+    "dX",
+    "VEC",
+    "sigma",
+    "dHmix",
+    "dSmix"
+  ],
+  "models_consolidated": [
+    "SVR",
+    "Ridge",
+    "LightGBM",
+    "RandomForest",
+    "XGBoost",
+    "GradientBoosting",
+    "DummyMean"
+  ],
+  "candidate_budget": 60,
+  "elapsed_seconds": 380.41781973838806
+}

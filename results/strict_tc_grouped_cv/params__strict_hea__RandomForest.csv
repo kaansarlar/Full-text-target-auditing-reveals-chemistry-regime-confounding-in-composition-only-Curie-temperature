@@ -1,0 +1,11 @@
+feature_set,model,fold,regressor__max_depth,regressor__max_features,regressor__min_samples_leaf,regressor__min_samples_split,regressor__n_estimators
+strict_hea,RandomForest,1,10,0.6,5,2,100
+strict_hea,RandomForest,2,10,sqrt,5,8,200
+strict_hea,RandomForest,3,30,0.6,5,5,800
+strict_hea,RandomForest,4,10,sqrt,5,8,200
+strict_hea,RandomForest,5,5,0.6,5,5,600
+strict_hea,RandomForest,6,5,1.0,5,5,800
+strict_hea,RandomForest,7,10,sqrt,5,8,200
+strict_hea,RandomForest,8,10,0.6,5,2,100
+strict_hea,RandomForest,9,5,sqrt,1,3,600
+strict_hea,RandomForest,10,30,0.8,5,2,800

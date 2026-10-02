@@ -1,0 +1,2 @@
+n,n_publications,between_family_variance_share,within_family_variance_share,model_r2,model_rmse_K,model_mae_K,model_bias_K,family_mean_r2,family_mean_rmse_K,family_mean_mae_K,family_mean_bias_K
+79,26,0.6046272861299071,0.3953727138700928,0.6104189971356822,101.15276998894356,66.31579752179876,-6.604570342998047,0.5014217263505161,114.43149430584486,74.70203728948776,3.986427432736048

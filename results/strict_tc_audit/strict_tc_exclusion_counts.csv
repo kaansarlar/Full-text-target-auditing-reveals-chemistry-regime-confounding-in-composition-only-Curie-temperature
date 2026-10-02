@@ -1,0 +1,7 @@
+audit_status,n_records
+exclude_Neel_temperature,21
+exclude_conflicting_assignment,3
+exclude_other_non_Curie_transition,6
+exclude_proxy_temperature,7
+exclude_secondary_source_only,18
+exclude_state_ambiguous,7

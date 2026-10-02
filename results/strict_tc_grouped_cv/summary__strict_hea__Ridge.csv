@@ -1,0 +1,2 @@
+feature_set,model,candidate_budget,n_records,n_references,n_features,oof_r2,oof_rmse,oof_mae,fold_r2_mean,fold_r2_sd,fold_mae_mean,fold_mae_sd,n_negative_predictions,min_prediction_K,max_prediction_K
+strict_hea,Ridge,60,79,26,5,0.5359429563416624,110.39885749511889,80.72152096883791,0.06832323852998896,0.8823778657253938,82.22994530274988,45.802169526382166,0,40.3817678109333,450.9048463657222

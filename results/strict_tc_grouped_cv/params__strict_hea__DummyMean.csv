@@ -1,0 +1,11 @@
+feature_set,model,fold
+strict_hea,DummyMean,1
+strict_hea,DummyMean,2
+strict_hea,DummyMean,3
+strict_hea,DummyMean,4
+strict_hea,DummyMean,5
+strict_hea,DummyMean,6
+strict_hea,DummyMean,7
+strict_hea,DummyMean,8
+strict_hea,DummyMean,9
+strict_hea,DummyMean,10

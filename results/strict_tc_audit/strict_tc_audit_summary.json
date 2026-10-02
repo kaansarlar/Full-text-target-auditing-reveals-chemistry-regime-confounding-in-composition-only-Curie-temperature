@@ -1,0 +1,11 @@
+{
+  "audited_records": 141,
+  "strict_records": 79,
+  "strict_publications": 26,
+  "excluded_records": 62,
+  "between_family_variance_share": 0.6046272861299071,
+  "corrected_source_rows": {
+    "91": 741.0,
+    "92": 696.0
+  }
+}

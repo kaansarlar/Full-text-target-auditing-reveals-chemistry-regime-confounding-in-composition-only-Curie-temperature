@@ -1,0 +1,4 @@
+chemistry_family,n_records,n_publications,TC_min_K,TC_median_K,TC_max_K
+3d-TM,32,9,110.0,305.0,741.0
+RE-rich,25,9,10.0,44.0,127.0
+TM-metalloid,22,8,137.0,315.4,560.0

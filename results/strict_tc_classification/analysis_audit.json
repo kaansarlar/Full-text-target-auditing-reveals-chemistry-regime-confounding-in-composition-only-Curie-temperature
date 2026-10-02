@@ -1,0 +1,7 @@
+{
+  "target": "250 <= TC <= 350 K",
+  "outer_splits": 10,
+  "inner_splits": 5,
+  "group": "reference_id",
+  "candidate_budget": 30
+}

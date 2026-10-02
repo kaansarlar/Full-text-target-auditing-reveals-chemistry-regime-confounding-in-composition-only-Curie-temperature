@@ -1,0 +1,11 @@
+feature_set,model,fold,regressor__C,regressor__epsilon,regressor__gamma
+strict_hea,SVR,1,100,0.01,0.03
+strict_hea,SVR,2,30,0.2,0.3
+strict_hea,SVR,3,1000,0.1,0.03
+strict_hea,SVR,4,30,0.2,0.3
+strict_hea,SVR,5,100,0.01,0.03
+strict_hea,SVR,6,100,0.1,0.1
+strict_hea,SVR,7,30,0.2,0.3
+strict_hea,SVR,8,500,0.2,0.01
+strict_hea,SVR,9,500,0.2,0.01
+strict_hea,SVR,10,500,0.2,0.01

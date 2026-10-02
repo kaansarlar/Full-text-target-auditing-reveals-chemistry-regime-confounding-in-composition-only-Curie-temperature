@@ -1,0 +1,11 @@
+feature_set,fold,regressor__colsample_bytree,regressor__learning_rate,regressor__max_depth,regressor__min_child_samples,regressor__n_estimators,regressor__num_leaves,regressor__subsample
+composition_only,1,0.6,0.03,8,5,200,15,1.0
+composition_only,2,0.8,0.01,12,10,400,15,0.8
+composition_only,3,1.0,0.05,3,5,600,20,1.0
+composition_only,4,0.6,0.05,5,5,400,20,0.8
+composition_only,5,0.8,0.1,5,5,100,31,0.8
+composition_only,6,0.6,0.01,8,10,200,31,1.0
+composition_only,7,1.0,0.03,5,3,600,7,1.0
+composition_only,8,0.6,0.01,8,10,200,31,1.0
+composition_only,9,0.6,0.01,8,10,200,31,1.0
+composition_only,10,0.6,0.1,12,20,100,40,0.6

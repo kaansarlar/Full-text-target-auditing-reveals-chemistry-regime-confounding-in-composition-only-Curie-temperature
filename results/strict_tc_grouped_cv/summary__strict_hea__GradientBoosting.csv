@@ -1,0 +1,2 @@
+feature_set,model,candidate_budget,n_records,n_references,n_features,oof_r2,oof_rmse,oof_mae,fold_r2_mean,fold_r2_sd,fold_mae_mean,fold_mae_sd,n_negative_predictions,min_prediction_K,max_prediction_K
+strict_hea,GradientBoosting,60,79,26,5,0.20021950394993715,144.93200454435737,99.96680126379219,-1.5735822199298244,3.8702176193895514,103.39479040986689,63.83185421624056,0,13.75122546712355,558.6185267427242
